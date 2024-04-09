@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root{
+    --Very_Dark_Magenta: hsl(300, 43%, 22%);
+    --Soft_Pink: hsl(333, 80%, 67%);
+    --Dark_Grayish_Magenta: hsl(303, 10%, 53%);
+    --Light_Grayish_Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* GENERAL STYLES */
+*{
+    font-family: 'League Spartan';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 2.5rem;
+    color: var(--Very_Dark_Magenta);
+}
+h2{
+    color: var(--Very_Dark_Magenta);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+:is(.person) img{
+    width: 45px;
+    border-radius: 50%;
+}
+:is(.person) .pic{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+:is(.person) .name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+:is(.person) p{
+    color: var(--Light_Grayish_Magenta);
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+}
+
+/* MAIN STYLES */
+main{
+    width: 100%;
+    min-width: 375px;
+    max-width: 1200px;
+    padding: 2rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.text{
+    text-align: center;
+
+    display: flex;
+    flex-flow: row wrap;
+    gap: 40px;
+}
+.text div:first-child{
+    width: 100%;
+    min-width: 250px;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.text div:first-child p{
+    color: var(--Dark_Grayish_Magenta);
+    line-height: 1.2rem;
+}
+.text div:last-child{
+    width: 100%;
+    min-width: 250px;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.text div:last-child article{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.text div:last-child article figure{
+    width: 150px;
+}
+.text div:last-child article h2{
+    width: 250px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 20px;
+}
+.grid h3{
+    color: var(--White);
+    font-weight: 600;
+}
+.grid .name p{
+    color: var(--Soft_Pink);
+}
+.grid article{
+    background-color: var(--Very_Dark_Magenta);
+    border-radius: 10px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 15px;
+}
+
+@media (min-width:1106px){
+    h1{
+        font-size: 3.5rem;
+    }
+    main .text{
+        text-align: left;
+    }
+    main .text div:last-child article{
+        position: relative;
+    }
+    main .text div:last-child article:nth-child(2){
+        left: 30px;
+    }
+    main .text div:last-child article:last-child{
+        left: 80px;
+    }
+    .grid{
+        gap: 35px;
+    }
+    .grid article{
+        position: relative;
+    }
+    .grid article:nth-child(2){
+        top: 20px;
+    }
+    .grid article:last-child{
+        top: 35px;
+    }
+}
